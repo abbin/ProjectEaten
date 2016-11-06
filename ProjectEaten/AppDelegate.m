@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "PEManager.h"
+#import "PEFirstLaunchViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    if (![PEManager isUserSet]) {
+        UINavigationController *firstLaunch = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PEFirstLaunchViewController"];
+        self.window.rootViewController = firstLaunch;
+    }
     return YES;
 }
 

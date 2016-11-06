@@ -17,6 +17,12 @@
 		ED4774151DCDC0100098263E /* ProjectEatenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4774141DCDC0100098263E /* ProjectEatenTests.m */; };
 		ED4774201DCDC0100098263E /* ProjectEatenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED47741F1DCDC0100098263E /* ProjectEatenUITests.m */; };
 		ED7CD1461DCF0700004AE368 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7CD1451DCF0700004AE368 /* CloudKit.framework */; };
+		ED7CD1491DCF08A8004AE368 /* PEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD1481DCF08A8004AE368 /* PEManager.m */; };
+		ED7CD14C1DCF095F004AE368 /* PEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD14B1DCF095F004AE368 /* PEConstants.m */; };
+		ED7CD14F1DCF0C05004AE368 /* PEFirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD14E1DCF0C05004AE368 /* PEFirstLaunchViewController.m */; };
+		ED7CD1531DCF2753004AE368 /* IMG_0102.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ED7CD1521DCF2753004AE368 /* IMG_0102.mp4 */; };
+		ED7CD1561DCF3177004AE368 /* PEUserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */; };
+		ED7CD1591DCF547C004AE368 /* PEUserLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,17 @@
 		ED4774211DCDC0100098263E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED7CD1431DCF06F2004AE368 /* ProjectEaten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectEaten.entitlements; sourceTree = "<group>"; };
 		ED7CD1451DCF0700004AE368 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		ED7CD1471DCF08A8004AE368 /* PEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEManager.h; sourceTree = "<group>"; };
+		ED7CD1481DCF08A8004AE368 /* PEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEManager.m; sourceTree = "<group>"; };
+		ED7CD14A1DCF095F004AE368 /* PEConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEConstants.h; sourceTree = "<group>"; };
+		ED7CD14B1DCF095F004AE368 /* PEConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEConstants.m; sourceTree = "<group>"; };
+		ED7CD14D1DCF0C05004AE368 /* PEFirstLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEFirstLaunchViewController.h; sourceTree = "<group>"; };
+		ED7CD14E1DCF0C05004AE368 /* PEFirstLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEFirstLaunchViewController.m; sourceTree = "<group>"; };
+		ED7CD1521DCF2753004AE368 /* IMG_0102.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_0102.mp4; sourceTree = "<group>"; };
+		ED7CD1541DCF3177004AE368 /* PEUserNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEUserNameViewController.h; sourceTree = "<group>"; };
+		ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEUserNameViewController.m; sourceTree = "<group>"; };
+		ED7CD1571DCF547C004AE368 /* PEUserLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEUserLocationViewController.h; sourceTree = "<group>"; };
+		ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEUserLocationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +129,16 @@
 				ED7CD1431DCF06F2004AE368 /* ProjectEaten.entitlements */,
 				ED4773FA1DCDC0100098263E /* AppDelegate.h */,
 				ED4773FB1DCDC0100098263E /* AppDelegate.m */,
+				ED7CD14A1DCF095F004AE368 /* PEConstants.h */,
+				ED7CD14B1DCF095F004AE368 /* PEConstants.m */,
+				ED7CD1471DCF08A8004AE368 /* PEManager.h */,
+				ED7CD1481DCF08A8004AE368 /* PEManager.m */,
+				ED7CD14D1DCF0C05004AE368 /* PEFirstLaunchViewController.h */,
+				ED7CD14E1DCF0C05004AE368 /* PEFirstLaunchViewController.m */,
+				ED7CD1541DCF3177004AE368 /* PEUserNameViewController.h */,
+				ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */,
+				ED7CD1571DCF547C004AE368 /* PEUserLocationViewController.h */,
+				ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */,
 				ED4773FD1DCDC0100098263E /* FirstViewController.h */,
 				ED4773FE1DCDC0100098263E /* FirstViewController.m */,
 				ED4774001DCDC0100098263E /* SecondViewController.h */,
@@ -120,6 +147,7 @@
 				ED4774061DCDC0100098263E /* Assets.xcassets */,
 				ED4774081DCDC0100098263E /* LaunchScreen.storyboard */,
 				ED47740B1DCDC0100098263E /* Info.plist */,
+				ED7CD1521DCF2753004AE368 /* IMG_0102.mp4 */,
 				ED4773F71DCDC0100098263E /* Supporting Files */,
 			);
 			path = ProjectEaten;
@@ -221,6 +249,7 @@
 		ED4773EC1DCDC0100098263E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PE;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Abbin Varghese";
 				TargetAttributes = {
@@ -278,6 +307,7 @@
 			files = (
 				ED47740A1DCDC0100098263E /* LaunchScreen.storyboard in Resources */,
 				ED4774071DCDC0100098263E /* Assets.xcassets in Resources */,
+				ED7CD1531DCF2753004AE368 /* IMG_0102.mp4 in Resources */,
 				ED4774051DCDC0100098263E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,9 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7CD14C1DCF095F004AE368 /* PEConstants.m in Sources */,
+				ED7CD1591DCF547C004AE368 /* PEUserLocationViewController.m in Sources */,
+				ED7CD1561DCF3177004AE368 /* PEUserNameViewController.m in Sources */,
+				ED7CD1491DCF08A8004AE368 /* PEManager.m in Sources */,
 				ED4774021DCDC0100098263E /* SecondViewController.m in Sources */,
 				ED4773FC1DCDC0100098263E /* AppDelegate.m in Sources */,
 				ED4773FF1DCDC0100098263E /* FirstViewController.m in Sources */,
+				ED7CD14F1DCF0C05004AE368 /* PEFirstLaunchViewController.m in Sources */,
 				ED4773F91DCDC0100098263E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
