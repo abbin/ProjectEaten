@@ -16,6 +16,7 @@
 		ED47740A1DCDC0100098263E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4774081DCDC0100098263E /* LaunchScreen.storyboard */; };
 		ED4774151DCDC0100098263E /* ProjectEatenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4774141DCDC0100098263E /* ProjectEatenTests.m */; };
 		ED4774201DCDC0100098263E /* ProjectEatenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED47741F1DCDC0100098263E /* ProjectEatenUITests.m */; };
+		ED7CD1461DCF0700004AE368 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7CD1451DCF0700004AE368 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		ED47741B1DCDC0100098263E /* ProjectEatenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectEatenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED47741F1DCDC0100098263E /* ProjectEatenUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectEatenUITests.m; sourceTree = "<group>"; };
 		ED4774211DCDC0100098263E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED7CD1431DCF06F2004AE368 /* ProjectEaten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectEaten.entitlements; sourceTree = "<group>"; };
+		ED7CD1451DCF0700004AE368 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7CD1461DCF0700004AE368 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +92,7 @@
 				ED4774131DCDC0100098263E /* ProjectEatenTests */,
 				ED47741E1DCDC0100098263E /* ProjectEatenUITests */,
 				ED4773F51DCDC0100098263E /* Products */,
+				ED7CD1441DCF0700004AE368 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +109,7 @@
 		ED4773F61DCDC0100098263E /* ProjectEaten */ = {
 			isa = PBXGroup;
 			children = (
+				ED7CD1431DCF06F2004AE368 /* ProjectEaten.entitlements */,
 				ED4773FA1DCDC0100098263E /* AppDelegate.h */,
 				ED4773FB1DCDC0100098263E /* AppDelegate.m */,
 				ED4773FD1DCDC0100098263E /* FirstViewController.h */,
@@ -143,6 +149,14 @@
 				ED4774211DCDC0100098263E /* Info.plist */,
 			);
 			path = ProjectEatenUITests;
+			sourceTree = "<group>";
+		};
+		ED7CD1441DCF0700004AE368 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED7CD1451DCF0700004AE368 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +228,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = EDXP6Y48QS;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					ED47740F1DCDC0100098263E = {
 						CreatedOnToolsVersion = 8.0;
@@ -433,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectEaten/ProjectEaten.entitlements;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectEaten/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -446,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectEaten/ProjectEaten.entitlements;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectEaten/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
