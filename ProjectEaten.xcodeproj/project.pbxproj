@@ -23,6 +23,7 @@
 		ED7CD1531DCF2753004AE368 /* IMG_0102.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ED7CD1521DCF2753004AE368 /* IMG_0102.mp4 */; };
 		ED7CD1561DCF3177004AE368 /* PEUserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */; };
 		ED7CD1591DCF547C004AE368 /* PEUserLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */; };
+		ED7CD15C1DCF5FCE004AE368 /* PELocationPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD15B1DCF5FCE004AE368 /* PELocationPickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEUserNameViewController.m; sourceTree = "<group>"; };
 		ED7CD1571DCF547C004AE368 /* PEUserLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEUserLocationViewController.h; sourceTree = "<group>"; };
 		ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEUserLocationViewController.m; sourceTree = "<group>"; };
+		ED7CD15A1DCF5FCE004AE368 /* PELocationPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PELocationPickerController.h; sourceTree = "<group>"; };
+		ED7CD15B1DCF5FCE004AE368 /* PELocationPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PELocationPickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */,
 				ED7CD1571DCF547C004AE368 /* PEUserLocationViewController.h */,
 				ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */,
+				ED7CD15A1DCF5FCE004AE368 /* PELocationPickerController.h */,
+				ED7CD15B1DCF5FCE004AE368 /* PELocationPickerController.m */,
 				ED4773FD1DCDC0100098263E /* FirstViewController.h */,
 				ED4773FE1DCDC0100098263E /* FirstViewController.m */,
 				ED4774001DCDC0100098263E /* SecondViewController.h */,
@@ -338,6 +343,7 @@
 				ED7CD1561DCF3177004AE368 /* PEUserNameViewController.m in Sources */,
 				ED7CD1491DCF08A8004AE368 /* PEManager.m in Sources */,
 				ED4774021DCDC0100098263E /* SecondViewController.m in Sources */,
+				ED7CD15C1DCF5FCE004AE368 /* PELocationPickerController.m in Sources */,
 				ED4773FC1DCDC0100098263E /* AppDelegate.m in Sources */,
 				ED4773FF1DCDC0100098263E /* FirstViewController.m in Sources */,
 				ED7CD14F1DCF0C05004AE368 /* PEFirstLaunchViewController.m in Sources */,

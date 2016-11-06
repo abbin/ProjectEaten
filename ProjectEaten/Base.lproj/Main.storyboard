@@ -277,6 +277,24 @@
             </objects>
             <point key="canvasLocation" x="2308" y="-1071.8140929535234"/>
         </scene>
+        <!--Location Picker Controller-->
+        <scene sceneID="bgc-7U-thv">
+            <objects>
+                <viewController storyboardIdentifier="PELocationPickerController" id="zbV-7Q-umn" customClass="PELocationPickerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jbR-5Y-aiy"/>
+                        <viewControllerLayoutGuide type="bottom" id="vFD-nV-I1D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ASL-Bv-yNh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3m2-bD-Eqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2967" y="-1072"/>
+        </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>

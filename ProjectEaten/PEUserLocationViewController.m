@@ -8,6 +8,7 @@
 
 #import "PEUserLocationViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "PELocationPickerController.h"
 
 @interface PEUserLocationViewController ()<CLLocationManagerDelegate>
 
@@ -43,7 +44,8 @@
 }
 
 - (IBAction)selectManually:(id)sender {
-    
+    PELocationPickerController *picker = [self.storyboard instantiateViewControllerWithIdentifier:@"PELocationPickerController"];
+    [self presentViewController:picker animated:YES completion:nil];
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
