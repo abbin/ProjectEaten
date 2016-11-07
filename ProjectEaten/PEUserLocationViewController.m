@@ -161,7 +161,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:userDictionary forKey:kPECurrentUserKey];
-//    [defaults synchronize];
+    [defaults synchronize];
 }
 
 /*
