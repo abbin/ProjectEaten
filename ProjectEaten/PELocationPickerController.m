@@ -10,18 +10,32 @@
 
 @interface PELocationPickerController ()
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @end
 
 @implementation PELocationPickerController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.searchBar becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Actions -
+
+- (IBAction)cancelPicker:(id)sender {
+    [self.searchBar resignFirstResponder];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

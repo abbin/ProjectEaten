@@ -288,12 +288,42 @@
                     <view key="view" contentMode="scaleToFill" id="ASL-Bv-yNh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfO-59-MMK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Select Location" id="g4W-OL-g29">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Mx7-Nk-bPd">
+                                            <connections>
+                                                <action selector="cancelPicker:" destination="zbV-7Q-umn" id="2c5-lq-oeR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="type a city" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-sF-bSu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JtW-sF-bSu" secondAttribute="trailing" id="6QM-j3-1gi"/>
+                            <constraint firstItem="dfO-59-MMK" firstAttribute="top" secondItem="jbR-5Y-aiy" secondAttribute="bottom" id="6jS-3y-rEy"/>
+                            <constraint firstItem="dfO-59-MMK" firstAttribute="leading" secondItem="ASL-Bv-yNh" secondAttribute="leading" id="MDR-7U-hjn"/>
+                            <constraint firstItem="JtW-sF-bSu" firstAttribute="leading" secondItem="ASL-Bv-yNh" secondAttribute="leading" id="Qvt-BG-9qz"/>
+                            <constraint firstAttribute="trailing" secondItem="dfO-59-MMK" secondAttribute="trailing" id="q6b-uG-65G"/>
+                            <constraint firstItem="JtW-sF-bSu" firstAttribute="top" secondItem="dfO-59-MMK" secondAttribute="bottom" id="zww-lC-dge"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="JtW-sF-bSu" id="I4A-sE-dOP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3m2-bD-Eqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2967" y="-1072"/>
+            <point key="canvasLocation" x="2965.5999999999999" y="-1072.7136431784108"/>
         </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
