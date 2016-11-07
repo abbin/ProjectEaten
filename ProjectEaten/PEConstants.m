@@ -10,6 +10,24 @@
 
 @implementation PEConstants
 
-NSString *const kPECurrentUserKey = @"currentUser";
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Error Code -
+
+NSInteger const kPERecordAlreadyExistsErrorCodeKey                           = 14;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - User -
+
+NSString *const kPECurrentUserKey                           = @"currentUser";
+NSString *const kPECurrentUserNameKey                       = @"currentUserName";
+NSString *const kPECurrentUserLocationNameKey               = @"currentUserLocationName";
+NSString *const kPECurrentUserLocationCoordinateKey         = @"currentUserLocationCoordinate";
+NSString *const kPECurrentUserLocationLatitudeKey           = @"currentUserLocationLatitude";
+NSString *const kPECurrentUserLocationLongitudeKey          = @"currentUserLocationLongitude";
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - RecordType -
+
+NSString *const kPEUserRecordTypeKey    = @"UserProfile";
 
 @end

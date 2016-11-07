@@ -26,7 +26,6 @@
 		ED7CD1531DCF2753004AE368 /* IMG_0102.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ED7CD1521DCF2753004AE368 /* IMG_0102.mp4 */; };
 		ED7CD1561DCF3177004AE368 /* PEUserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */; };
 		ED7CD1591DCF547C004AE368 /* PEUserLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */; };
-		ED7CD15C1DCF5FCE004AE368 /* PELocationPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD15B1DCF5FCE004AE368 /* PELocationPickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +86,6 @@
 		ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEUserNameViewController.m; sourceTree = "<group>"; };
 		ED7CD1571DCF547C004AE368 /* PEUserLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEUserLocationViewController.h; sourceTree = "<group>"; };
 		ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEUserLocationViewController.m; sourceTree = "<group>"; };
-		ED7CD15A1DCF5FCE004AE368 /* PELocationPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PELocationPickerController.h; sourceTree = "<group>"; };
-		ED7CD15B1DCF5FCE004AE368 /* PELocationPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PELocationPickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +168,6 @@
 				ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */,
 				ED7CD1571DCF547C004AE368 /* PEUserLocationViewController.h */,
 				ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */,
-				ED7CD15A1DCF5FCE004AE368 /* PELocationPickerController.h */,
-				ED7CD15B1DCF5FCE004AE368 /* PELocationPickerController.m */,
 				ED4773FD1DCDC0100098263E /* FirstViewController.h */,
 				ED4773FE1DCDC0100098263E /* FirstViewController.m */,
 				ED4774001DCDC0100098263E /* SecondViewController.h */,
@@ -237,6 +232,7 @@
 				ED4773F21DCDC0100098263E /* Resources */,
 				4DC9CADE62B2A779B369060A /* [CP] Embed Pods Frameworks */,
 				54CC6FAA0558879304489AD2 /* [CP] Copy Pods Resources */,
+				ED17A0831DD06FF500D6E8CB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -510,6 +506,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		ED17A0831DD06FF500D6E8CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 1786cf2c7ac82b5ec8a35411f91a89dc9de11d4e 4f1012b0d0ad5ec8e15d3f60b9ab6c6fd676085e54b39ce563bf5693b07f76c2";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -522,7 +531,6 @@
 				ED7CD1561DCF3177004AE368 /* PEUserNameViewController.m in Sources */,
 				ED7CD1491DCF08A8004AE368 /* PEManager.m in Sources */,
 				ED4774021DCDC0100098263E /* SecondViewController.m in Sources */,
-				ED7CD15C1DCF5FCE004AE368 /* PELocationPickerController.m in Sources */,
 				ED4773FC1DCDC0100098263E /* AppDelegate.m in Sources */,
 				ED4773FF1DCDC0100098263E /* FirstViewController.m in Sources */,
 				ED7CD14F1DCF0C05004AE368 /* PEFirstLaunchViewController.m in Sources */,
@@ -605,7 +613,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -653,6 +663,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

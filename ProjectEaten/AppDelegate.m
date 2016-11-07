@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "PEManager.h"
 #import "PEFirstLaunchViewController.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @import GooglePlaces;
 
@@ -22,12 +24,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [GMSPlacesClient provideAPIKey:@"AIzaSyDCXB1ZqQdo0mCq4bhgx6rpuL0NYs5qvZM"];
+    [Fabric with:@[[Crashlytics class]]];
     
     if (![PEManager isUserSet]) {
-        UINavigationController *firstLaunch = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PEFirstLaunchViewController"];
-        self.window.rootViewController = firstLaunch;
+        PEFirstLaunchViewController *firstLaunch = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PEFirstLaunchViewController"];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:firstLaunch];
+        [nav setNavigationBarHidden:YES];
+        self.window.rootViewController = nav;
     }
     return YES;
+}
+
+
+-(void)changeRootViewControllerToViewController:(UIViewController*)controller{
+    self.window.rootViewController = controller;
 }
 
 

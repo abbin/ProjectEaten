@@ -37,16 +37,24 @@
 #pragma mark - Actions -
 
 - (IBAction)next:(id)sender {
-    PEUserLocationViewController *locationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PEUserLocationViewController"];
-    [self.navigationController pushViewController:locationVC animated:YES];
+    NSString *trimmedString = [self.userNameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (trimmedString.length>0) {
+        PEUserLocationViewController *locationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PEUserLocationViewController"];
+        locationVC.userName = trimmedString;
+        [self.navigationController pushViewController:locationVC animated:YES];
+    }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - UITextFieldDelegate -
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    PEUserLocationViewController *locationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PEUserLocationViewController"];
-    [self.navigationController pushViewController:locationVC animated:YES];
+    NSString *trimmedString = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (trimmedString.length>0) {
+        PEUserLocationViewController *locationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PEUserLocationViewController"];
+        locationVC.userName = trimmedString;
+        [self.navigationController pushViewController:locationVC animated:YES];
+    }
     return YES;
 }
 

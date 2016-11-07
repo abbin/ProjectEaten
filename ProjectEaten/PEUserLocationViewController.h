@@ -10,4 +10,6 @@
 
 @interface PEUserLocationViewController : UIViewController
 
+@property (strong, nonatomic) NSString *userName;
+
 @end

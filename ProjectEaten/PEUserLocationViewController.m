@@ -7,7 +7,9 @@
 //
 
 #import "PEUserLocationViewController.h"
-#import "PELocationPickerController.h"
+#import <CloudKit/CloudKit.h>
+#import "PEConstants.h"
+#import "AppDelegate.h"
 
 @import GooglePlaces;
 
@@ -41,10 +43,14 @@
         
         if (placeLikelihoodList != nil) {
             GMSPlace *place = [[[placeLikelihoodList likelihoods] firstObject] place];
+            NSString *name = @"";
             if (place != nil) {
-                NSLog(@"%@",place.name);
-                NSLog(@"%@",[[place.formattedAddress componentsSeparatedByString:@", "]
-                             componentsJoinedByString:@"\n"]);
+                for (GMSAddressComponent *component in place.addressComponents) {
+                    if ([component.type isEqualToString:@"locality"]) {
+                        name = component.name;
+                    }
+                }
+                [self updateUserWithPlaceName:name coordinate:place.coordinate];
             }
         }
     }];
@@ -67,9 +73,9 @@
 #pragma mark - GMSAutocompleteViewControllerDelegate -
 
 - (void)viewController:(GMSAutocompleteViewController *)viewController didAutocompleteWithPlace:(GMSPlace *)place {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    NSLog(@"Place name %@", place.name);
-    NSLog(@"Place name %f,%f", place.coordinate.latitude,place.coordinate.longitude);
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self updateUserWithPlaceName:place.name coordinate:place.coordinate];
+    }];
 }
 
 - (void)viewController:(GMSAutocompleteViewController *)viewController didFailAutocompleteWithError:(NSError *)error {
@@ -87,6 +93,75 @@
 
 - (void)didUpdateAutocompletePredictions:(GMSAutocompleteViewController *)viewController {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Other -
+
+-(void)updateUserWithPlaceName:(NSString*)placeName coordinate:(CLLocationCoordinate2D)coordinate{
+    CKContainer *myContainer = [CKContainer defaultContainer];
+    [myContainer fetchUserRecordIDWithCompletionHandler:^(CKRecordID * _Nullable recordID, NSError * _Nullable error) {
+        if (!error) {
+            CKRecordID *userRecordID = [[CKRecordID alloc] initWithRecordName:[NSString stringWithFormat:@"%@%@",kPEUserRecordTypeKey,recordID.recordName]];
+            CKRecord *userRecord = [[CKRecord alloc] initWithRecordType:kPEUserRecordTypeKey recordID:userRecordID];
+            userRecord[kPECurrentUserNameKey] = self.userName;
+            userRecord[kPECurrentUserLocationNameKey] = placeName;
+            userRecord[kPECurrentUserLocationCoordinateKey] = [[CLLocation alloc]initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+            
+            CKDatabase *publicDatabase = [myContainer publicCloudDatabase];
+            [publicDatabase saveRecord:userRecord completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+                if (!error) {
+                    [self synchronizeRecord:record];
+                    [self switchRootViewController];
+                }
+                else if (error.code == kPERecordAlreadyExistsErrorCodeKey){
+                    CKRecord *serverRecord = [error.userInfo objectForKey:@"ServerRecord"];
+                    serverRecord[kPECurrentUserNameKey] = self.userName;
+                    serverRecord[kPECurrentUserLocationNameKey] = placeName;
+                    serverRecord[kPECurrentUserLocationCoordinateKey] = [[CLLocation alloc]initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+                    [publicDatabase saveRecord:serverRecord completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+                        if (!error) {
+                            [self synchronizeRecord:record];
+                            [self switchRootViewController];
+                        }
+                        else{
+                            // Handle Error
+                        }
+                    }];
+                }
+                else{
+                    // Handle Error
+                }
+            }];
+        }
+        else{
+            // Handle Error
+        }
+    }];
+}
+
+-(void)switchRootViewController{
+    NSLog(@"Switching RootViewController");
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UITabBarController *newRootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PETabBarController"];
+        AppDelegate *delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        [delegate changeRootViewControllerToViewController:newRootViewController];
+    });
+}
+
+-(void)synchronizeRecord:(CKRecord*)record{
+    NSMutableDictionary *userDictionary = [[NSMutableDictionary alloc]init];
+    [userDictionary setObject:record[kPECurrentUserNameKey] forKey:kPECurrentUserNameKey];
+    [userDictionary setObject:record[kPECurrentUserLocationNameKey] forKey:kPECurrentUserLocationNameKey];
+    
+    CLLocation *location = record[kPECurrentUserLocationCoordinateKey];
+    
+    [userDictionary setObject:[NSNumber numberWithDouble:location.coordinate.latitude] forKey:kPECurrentUserLocationLatitudeKey];
+    [userDictionary setObject:[NSNumber numberWithDouble:location.coordinate.longitude] forKey:kPECurrentUserLocationLongitudeKey];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:userDictionary forKey:kPECurrentUserKey];
+//    [defaults synchronize];
 }
 
 /*
