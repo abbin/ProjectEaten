@@ -9,6 +9,8 @@ target 'ProjectEaten' do
 
 pod 'GooglePlaces'
 pod 'GoogleMaps'
+pod 'Fabric'
+pod 'Crashlytics'
 
   target 'ProjectEatenTests' do
     inherit! :search_paths
