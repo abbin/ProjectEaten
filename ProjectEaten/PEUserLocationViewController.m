@@ -13,9 +13,11 @@
 
 @import GooglePlaces;
 
-@interface PEUserLocationViewController ()<GMSAutocompleteViewControllerDelegate>
+@interface PEUserLocationViewController ()<GMSAutocompleteViewControllerDelegate,CLLocationManagerDelegate>
 
 @property (strong, nonatomic) GMSPlacesClient *placesClient;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (assign, nonatomic) BOOL firstUpdateFinished;
 
 @end
 
@@ -31,29 +33,47 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    [self.locationManager stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    if (!self.firstUpdateFinished) {
+        self.firstUpdateFinished = YES;
+        [self.placesClient currentPlaceWithCallback:^(GMSPlaceLikelihoodList *placeLikelihoodList, NSError *error){
+            if (error != nil) {
+                NSLog(@"Pick Place error %@", [error localizedDescription]);
+                return;
+            }
+            
+            if (placeLikelihoodList != nil) {
+                GMSPlace *place = [[[placeLikelihoodList likelihoods] firstObject] place];
+                NSString *name = @"";
+                if (place != nil) {
+                    for (GMSAddressComponent *component in place.addressComponents) {
+                        if ([component.type isEqualToString:@"locality"]) {
+                            name = component.name;
+                        }
+                    }
+                    [self updateUserWithPlaceName:name coordinate:place.coordinate];
+                }
+            }
+        }];
+    }
+    [self.locationManager stopUpdatingLocation];
+}
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Actions -
 
 - (IBAction)autoDectectLocation:(id)sender {
-    [self.placesClient currentPlaceWithCallback:^(GMSPlaceLikelihoodList *placeLikelihoodList, NSError *error){
-        if (error != nil) {
-            NSLog(@"Pick Place error %@", [error localizedDescription]);
-            return;
-        }
-        
-        if (placeLikelihoodList != nil) {
-            GMSPlace *place = [[[placeLikelihoodList likelihoods] firstObject] place];
-            NSString *name = @"";
-            if (place != nil) {
-                for (GMSAddressComponent *component in place.addressComponents) {
-                    if ([component.type isEqualToString:@"locality"]) {
-                        name = component.name;
-                    }
-                }
-                [self updateUserWithPlaceName:name coordinate:place.coordinate];
-            }
-        }
-    }];
+    if (!self.locationManager) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+    }
+    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager startUpdatingLocation];
 }
 
 - (IBAction)selectManually:(id)sender {
