@@ -10,6 +10,8 @@
 #import "PEManager.h"
 #import "PEFirstLaunchViewController.h"
 
+@import GooglePlaces;
+
 @interface AppDelegate ()
 
 @end
@@ -18,6 +20,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [GMSPlacesClient provideAPIKey:@"AIzaSyDCXB1ZqQdo0mCq4bhgx6rpuL0NYs5qvZM"];
+    
     if (![PEManager isUserSet]) {
         UINavigationController *firstLaunch = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PEFirstLaunchViewController"];
         self.window.rootViewController = firstLaunch;

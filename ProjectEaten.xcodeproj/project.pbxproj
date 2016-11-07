@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D071774620180F268BF35A5 /* libPods-ProjectEatenUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 166A06F3851C7E8ADB80FA1C /* libPods-ProjectEatenUITests.a */; };
+		5AEDF5E1B3EF4601E0C1EFE6 /* libPods-ProjectEaten.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CC67664FEB808F43E7E57A /* libPods-ProjectEaten.a */; };
+		C0667624E0C120BAF79369FB /* libPods-ProjectEatenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAEBA73D5FAF11EB6AE4F04B /* libPods-ProjectEatenTests.a */; };
 		ED4773F91DCDC0100098263E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4773F81DCDC0100098263E /* main.m */; };
 		ED4773FC1DCDC0100098263E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4773FB1DCDC0100098263E /* AppDelegate.m */; };
 		ED4773FF1DCDC0100098263E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4773FE1DCDC0100098263E /* FirstViewController.m */; };
@@ -44,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04B14AAD039F1AABBD6AB3E3 /* Pods-ProjectEaten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectEaten.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectEaten/Pods-ProjectEaten.release.xcconfig"; sourceTree = "<group>"; };
+		166A06F3851C7E8ADB80FA1C /* libPods-ProjectEatenUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProjectEatenUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B4DE742D81C12966BE3FDE6 /* Pods-ProjectEatenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectEatenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectEatenUITests/Pods-ProjectEatenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		50373D7665FADB9812C966C2 /* Pods-ProjectEatenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectEatenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectEatenTests/Pods-ProjectEatenTests.release.xcconfig"; sourceTree = "<group>"; };
+		6E59B22E764F6E28E62ACD77 /* Pods-ProjectEatenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectEatenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectEatenUITests/Pods-ProjectEatenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A1CC67664FEB808F43E7E57A /* libPods-ProjectEaten.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProjectEaten.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AD9EA72D569AA5813D3DFC /* Pods-ProjectEatenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectEatenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectEatenTests/Pods-ProjectEatenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BAEBA73D5FAF11EB6AE4F04B /* libPods-ProjectEatenTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProjectEatenTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFEED8A23EC224BC7C089FFA /* Pods-ProjectEaten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectEaten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectEaten/Pods-ProjectEaten.debug.xcconfig"; sourceTree = "<group>"; };
 		ED4773F41DCDC0100098263E /* ProjectEaten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectEaten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4773F81DCDC0100098263E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED4773FA1DCDC0100098263E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED7CD1461DCF0700004AE368 /* CloudKit.framework in Frameworks */,
+				5AEDF5E1B3EF4601E0C1EFE6 /* libPods-ProjectEaten.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0667624E0C120BAF79369FB /* libPods-ProjectEatenTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +113,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D071774620180F268BF35A5 /* libPods-ProjectEatenUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63AC9C9B311D3E59A72E5B60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFEED8A23EC224BC7C089FFA /* Pods-ProjectEaten.debug.xcconfig */,
+				04B14AAD039F1AABBD6AB3E3 /* Pods-ProjectEaten.release.xcconfig */,
+				A2AD9EA72D569AA5813D3DFC /* Pods-ProjectEatenTests.debug.xcconfig */,
+				50373D7665FADB9812C966C2 /* Pods-ProjectEatenTests.release.xcconfig */,
+				1B4DE742D81C12966BE3FDE6 /* Pods-ProjectEatenUITests.debug.xcconfig */,
+				6E59B22E764F6E28E62ACD77 /* Pods-ProjectEatenUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED4773EB1DCDC0100098263E = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +141,7 @@
 				ED47741E1DCDC0100098263E /* ProjectEatenUITests */,
 				ED4773F51DCDC0100098263E /* Products */,
 				ED7CD1441DCF0700004AE368 /* Frameworks */,
+				63AC9C9B311D3E59A72E5B60 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,6 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				ED7CD1451DCF0700004AE368 /* CloudKit.framework */,
+				A1CC67664FEB808F43E7E57A /* libPods-ProjectEaten.a */,
+				BAEBA73D5FAF11EB6AE4F04B /* libPods-ProjectEatenTests.a */,
+				166A06F3851C7E8ADB80FA1C /* libPods-ProjectEatenUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED4774241DCDC0100098263E /* Build configuration list for PBXNativeTarget "ProjectEaten" */;
 			buildPhases = (
+				A7C3F7A99F06986DEDEC1FE9 /* [CP] Check Pods Manifest.lock */,
 				ED4773F01DCDC0100098263E /* Sources */,
 				ED4773F11DCDC0100098263E /* Frameworks */,
 				ED4773F21DCDC0100098263E /* Resources */,
+				4DC9CADE62B2A779B369060A /* [CP] Embed Pods Frameworks */,
+				54CC6FAA0558879304489AD2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED4774271DCDC0100098263E /* Build configuration list for PBXNativeTarget "ProjectEatenTests" */;
 			buildPhases = (
+				94CC97364B8ECC62FAAB9AE0 /* [CP] Check Pods Manifest.lock */,
 				ED47740C1DCDC0100098263E /* Sources */,
 				ED47740D1DCDC0100098263E /* Frameworks */,
 				ED47740E1DCDC0100098263E /* Resources */,
+				7F719A376757FA82B020D02F /* [CP] Embed Pods Frameworks */,
+				77607DAC0AE24B0C52BE43A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,9 +272,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED47742A1DCDC0100098263E /* Build configuration list for PBXNativeTarget "ProjectEatenUITests" */;
 			buildPhases = (
+				2F370D7EFA479DB61C1E8E18 /* [CP] Check Pods Manifest.lock */,
 				ED4774171DCDC0100098263E /* Sources */,
 				ED4774181DCDC0100098263E /* Frameworks */,
 				ED4774191DCDC0100098263E /* Resources */,
+				2ADA22C9F2DAF61EF6BB9CAC /* [CP] Embed Pods Frameworks */,
+				86D86D35E8FE489226A618F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,6 +373,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ADA22C9F2DAF61EF6BB9CAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectEatenUITests/Pods-ProjectEatenUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F370D7EFA479DB61C1E8E18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4DC9CADE62B2A779B369060A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectEaten/Pods-ProjectEaten-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54CC6FAA0558879304489AD2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectEaten/Pods-ProjectEaten-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77607DAC0AE24B0C52BE43A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectEatenTests/Pods-ProjectEatenTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F719A376757FA82B020D02F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectEatenTests/Pods-ProjectEatenTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86D86D35E8FE489226A618F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectEatenUITests/Pods-ProjectEatenUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94CC97364B8ECC62FAAB9AE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7C3F7A99F06986DEDEC1FE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED4773F01DCDC0100098263E /* Sources */ = {
@@ -494,6 +673,7 @@
 		};
 		ED4774251DCDC0100098263E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFEED8A23EC224BC7C089FFA /* Pods-ProjectEaten.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ProjectEaten/ProjectEaten.entitlements;
@@ -508,6 +688,7 @@
 		};
 		ED4774261DCDC0100098263E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04B14AAD039F1AABBD6AB3E3 /* Pods-ProjectEaten.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ProjectEaten/ProjectEaten.entitlements;
@@ -522,6 +703,7 @@
 		};
 		ED4774281DCDC0100098263E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2AD9EA72D569AA5813D3DFC /* Pods-ProjectEatenTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
@@ -535,6 +717,7 @@
 		};
 		ED4774291DCDC0100098263E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50373D7665FADB9812C966C2 /* Pods-ProjectEatenTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
@@ -548,6 +731,7 @@
 		};
 		ED47742B1DCDC0100098263E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4DE742D81C12966BE3FDE6 /* Pods-ProjectEatenUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectEatenUITests/Info.plist;
@@ -560,6 +744,7 @@
 		};
 		ED47742C1DCDC0100098263E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E59B22E764F6E28E62ACD77 /* Pods-ProjectEatenUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectEatenUITests/Info.plist;
