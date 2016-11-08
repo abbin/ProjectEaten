@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>So you can photograph all the delicious things you&apos;re eating and drinking</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>So you can share great food shots from your photo library</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Enjoy the Eaten experience tailored to your location</string>
 	<key>CFBundleDevelopmentRegion</key>

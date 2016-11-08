@@ -11,6 +11,7 @@
 		5AEDF5E1B3EF4601E0C1EFE6 /* libPods-ProjectEaten.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CC67664FEB808F43E7E57A /* libPods-ProjectEaten.a */; };
 		C0667624E0C120BAF79369FB /* libPods-ProjectEatenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAEBA73D5FAF11EB6AE4F04B /* libPods-ProjectEatenTests.a */; };
 		ED3D56641DD1C5F300D27118 /* PEAccountSetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED3D56631DD1C5F300D27118 /* PEAccountSetUpViewController.m */; };
+		ED46D5641DD216B20030CC26 /* PEAddViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED46D5631DD216B20030CC26 /* PEAddViewControllerOne.m */; };
 		ED4773F91DCDC0100098263E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4773F81DCDC0100098263E /* main.m */; };
 		ED4773FC1DCDC0100098263E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4773FB1DCDC0100098263E /* AppDelegate.m */; };
 		ED4773FF1DCDC0100098263E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4773FE1DCDC0100098263E /* FirstViewController.m */; };
@@ -58,6 +59,8 @@
 		BFEED8A23EC224BC7C089FFA /* Pods-ProjectEaten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectEaten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectEaten/Pods-ProjectEaten.debug.xcconfig"; sourceTree = "<group>"; };
 		ED3D56621DD1C5F300D27118 /* PEAccountSetUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEAccountSetUpViewController.h; sourceTree = "<group>"; };
 		ED3D56631DD1C5F300D27118 /* PEAccountSetUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEAccountSetUpViewController.m; sourceTree = "<group>"; };
+		ED46D5621DD216B20030CC26 /* PEAddViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEAddViewControllerOne.h; sourceTree = "<group>"; };
+		ED46D5631DD216B20030CC26 /* PEAddViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEAddViewControllerOne.m; sourceTree = "<group>"; };
 		ED4773F41DCDC0100098263E /* ProjectEaten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectEaten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4773F81DCDC0100098263E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED4773FA1DCDC0100098263E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */,
 				ED3D56621DD1C5F300D27118 /* PEAccountSetUpViewController.h */,
 				ED3D56631DD1C5F300D27118 /* PEAccountSetUpViewController.m */,
+				ED46D5621DD216B20030CC26 /* PEAddViewControllerOne.h */,
+				ED46D5631DD216B20030CC26 /* PEAddViewControllerOne.m */,
 				ED4773FD1DCDC0100098263E /* FirstViewController.h */,
 				ED4773FE1DCDC0100098263E /* FirstViewController.m */,
 				ED4774001DCDC0100098263E /* SecondViewController.h */,
@@ -532,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED7CD14C1DCF095F004AE368 /* PEConstants.m in Sources */,
+				ED46D5641DD216B20030CC26 /* PEAddViewControllerOne.m in Sources */,
 				ED7CD1591DCF547C004AE368 /* PEUserLocationViewController.m in Sources */,
 				ED7CD1561DCF3177004AE368 /* PEUserNameViewController.m in Sources */,
 				ED7CD1491DCF08A8004AE368 /* PEManager.m in Sources */,

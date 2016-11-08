@@ -26,6 +26,9 @@
     [GMSPlacesClient provideAPIKey:@"AIzaSyDCXB1ZqQdo0mCq4bhgx6rpuL0NYs5qvZM"];
     [Fabric with:@[[Crashlytics class]]];
     
+    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    
     if (![PEManager isUserSet]) {
         PEFirstLaunchViewController *firstLaunch = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PEFirstLaunchViewController"];
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:firstLaunch];

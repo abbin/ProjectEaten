@@ -44,7 +44,6 @@
                 [self alertWithError:error];
                 return;
             }
-            
             if (placeLikelihoodList != nil) {
                 GMSPlace *place = [[[placeLikelihoodList likelihoods] firstObject] place];
                 if (place != nil) {
@@ -161,7 +160,7 @@
         [UIView animateWithDuration:0.3 animations:^{
             self.logLabel.alpha = 0;
         } completion:^(BOOL finished) {
-            self.logLabel.text = @"Doing more sciency stuff...";
+            self.logLabel.text = @"Doing more stuff...";
             [UIView animateWithDuration:0.3 animations:^{
                 self.logLabel.alpha = 1;
             } completion:nil];

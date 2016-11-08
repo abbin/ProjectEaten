@@ -11,6 +11,7 @@ pod 'GooglePlaces'
 pod 'GoogleMaps'
 pod 'Fabric'
 pod 'Crashlytics'
+pod 'YangMingShan'
 
   target 'ProjectEatenTests' do
     inherit! :search_paths
