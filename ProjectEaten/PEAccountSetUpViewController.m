@@ -41,7 +41,7 @@
     if (self.placeName.length == 0) {
         [self.placesClient currentPlaceWithCallback:^(GMSPlaceLikelihoodList *placeLikelihoodList, NSError *error){
             if (error != nil) {
-                NSLog(@"Pick Place error %@", [error localizedDescription]);
+                [self alertWithError:error];
                 return;
             }
             
@@ -69,8 +69,8 @@
 
 -(void)updateUser{
     CKContainer *myContainer = [CKContainer defaultContainer];
-    [myContainer fetchUserRecordIDWithCompletionHandler:^(CKRecordID * _Nullable recordID, NSError * _Nullable error) {
-        if (!error) {
+    [myContainer fetchUserRecordIDWithCompletionHandler:^(CKRecordID * _Nullable recordID, NSError * _Nullable error3) {
+        if (!error3) {
             CKRecordID *userRecordID = [[CKRecordID alloc] initWithRecordName:[NSString stringWithFormat:@"%@%@",kPEUserRecordTypeKey,recordID.recordName]];
             CKRecord *userRecord = [[CKRecord alloc] initWithRecordType:kPEUserRecordTypeKey recordID:userRecordID];
             userRecord[kPECurrentUserNameKey] = self.userName;
@@ -78,33 +78,33 @@
             userRecord[kPECurrentUserLocationCoordinateKey] = [[CLLocation alloc]initWithLatitude:self.coordinate.latitude longitude:self.coordinate.longitude];
             
             CKDatabase *publicDatabase = [myContainer publicCloudDatabase];
-            [publicDatabase saveRecord:userRecord completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
-                if (!error) {
+            [publicDatabase saveRecord:userRecord completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error2) {
+                if (!error2) {
                     [self synchronizeRecord:record];
                     [self switchRootViewController];
                 }
-                else if (error.code == kPERecordAlreadyExistsErrorCodeKey){
-                    CKRecord *serverRecord = [error.userInfo objectForKey:@"ServerRecord"];
+                else if (error2.code == kPERecordAlreadyExistsErrorCodeKey){
+                    CKRecord *serverRecord = [error2.userInfo objectForKey:@"ServerRecord"];
                     serverRecord[kPECurrentUserNameKey] = self.userName;
                     serverRecord[kPECurrentUserLocationNameKey] = self.placeName;
                     serverRecord[kPECurrentUserLocationCoordinateKey] = [[CLLocation alloc]initWithLatitude:self.coordinate.latitude longitude:self.coordinate.longitude];
-                    [publicDatabase saveRecord:serverRecord completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
-                        if (!error) {
+                    [publicDatabase saveRecord:serverRecord completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error1) {
+                        if (!error1) {
                             [self synchronizeRecord:record];
                             [self switchRootViewController];
                         }
                         else{
-                            // Handle Error
+                            [self alertWithError:error1];
                         }
                     }];
                 }
                 else{
-                    // Handle Error
+                    [self alertWithError:error2];
                 }
             }];
         }
         else{
-            // Handle Error
+            [self alertWithError:error3];
         }
     }];
 }
@@ -134,6 +134,15 @@
     [defaults synchronize];
 }
 
+-(void)alertWithError:(NSError*)error{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Somthing went wrong" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 -(void)doFinishingUp{
     if (self.shouldLog) {
         [UIView animateWithDuration:0.3 animations:^{
@@ -142,9 +151,7 @@
             self.logLabel.text = @"Finishing up...";
             [UIView animateWithDuration:0.3 animations:^{
                 self.logLabel.alpha = 1;
-            } completion:^(BOOL finished) {
-                
-            }];
+            } completion:nil];
         }];
     }
 }
@@ -157,9 +164,7 @@
             self.logLabel.text = @"Doing more sciency stuff...";
             [UIView animateWithDuration:0.3 animations:^{
                 self.logLabel.alpha = 1;
-            } completion:^(BOOL finished) {
-                
-            }];
+            } completion:nil];
         }];
     }
 }

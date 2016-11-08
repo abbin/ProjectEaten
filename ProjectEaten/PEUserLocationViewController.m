@@ -28,13 +28,24 @@
     
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self.autoDectectButton setTitle:@"Auto-dectect location" forState:UIControlStateNormal];
+    self.firstUpdateFinished = NO;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - CLLocationManagerDelegate -
+
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    [self.autoDectectButton setTitle:@"Auto-dectect location" forState:UIControlStateNormal];
     [self.locationManager stopUpdatingLocation];
+    self.firstUpdateFinished = NO;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
