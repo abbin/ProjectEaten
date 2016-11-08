@@ -37,7 +37,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self performSelector:@selector(doSciencyStuff) withObject:nil afterDelay:3];
-    [self performSelector:@selector(doFinishingUp) withObject:nil afterDelay:6];
+    [self performSelector:@selector(doFinishingUp) withObject:nil afterDelay:9];
     if (self.placeName.length == 0) {
         [self.placesClient currentPlaceWithCallback:^(GMSPlaceLikelihoodList *placeLikelihoodList, NSError *error){
             if (error != nil) {

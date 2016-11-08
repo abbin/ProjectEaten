@@ -453,7 +453,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8d0-TT-6be" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HgC-eB-Tog">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HgC-eB-Tog">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -472,7 +472,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ub0-n7-YFS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gg6-E1-cyV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gg6-E1-cyV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

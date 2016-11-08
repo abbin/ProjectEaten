@@ -18,7 +18,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIBarButtonItem *next = [[UIBarButtonItem alloc]initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(nextScreen)];
+    self.navigationItem.rightBarButtonItem = next;
+    self.navigationItem.title = @"Item Details";
+    UIBarButtonItem *cancel = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelUpload)];
+    self.navigationItem.leftBarButtonItem = cancel;
     // Do any additional setup after loading the view.
+}
+
+-(void)cancelUpload{
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"Are you sure?" message:@"The photos you selected have not finished uploading" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *yes = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [actionSheet addAction:yes];
+    [actionSheet addAction:cancel];
+    [self presentViewController:actionSheet animated:yes completion:nil];
+}
+
+-(void)nextScreen{
+    
 }
 
 - (void)didReceiveMemoryWarning {
