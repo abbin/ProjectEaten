@@ -12,7 +12,7 @@
 @implementation PEManager
 
 +(BOOL)isUserSet{
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:kPECurrentUserKey]) {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kPECurrentUserKey]) {
         return YES;
     }
     else{
