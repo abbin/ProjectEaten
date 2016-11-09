@@ -11,7 +11,6 @@
 		5AEDF5E1B3EF4601E0C1EFE6 /* libPods-ProjectEaten.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CC67664FEB808F43E7E57A /* libPods-ProjectEaten.a */; };
 		C0667624E0C120BAF79369FB /* libPods-ProjectEatenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAEBA73D5FAF11EB6AE4F04B /* libPods-ProjectEatenTests.a */; };
 		ED3D56641DD1C5F300D27118 /* PEAccountSetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED3D56631DD1C5F300D27118 /* PEAccountSetUpViewController.m */; };
-		ED46D5641DD216B20030CC26 /* PEAddViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED46D5631DD216B20030CC26 /* PEAddViewControllerOne.m */; };
 		ED4773F91DCDC0100098263E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4773F81DCDC0100098263E /* main.m */; };
 		ED4773FC1DCDC0100098263E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4773FB1DCDC0100098263E /* AppDelegate.m */; };
 		ED4773FF1DCDC0100098263E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4773FE1DCDC0100098263E /* FirstViewController.m */; };
@@ -21,6 +20,12 @@
 		ED47740A1DCDC0100098263E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4774081DCDC0100098263E /* LaunchScreen.storyboard */; };
 		ED4774151DCDC0100098263E /* ProjectEatenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4774141DCDC0100098263E /* ProjectEatenTests.m */; };
 		ED4774201DCDC0100098263E /* ProjectEatenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED47741F1DCDC0100098263E /* ProjectEatenUITests.m */; };
+		ED621E1D1DD2FB37005EA40C /* PEAddTableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED621E1C1DD2FB37005EA40C /* PEAddTableViewControllerOne.m */; };
+		ED621E261DD2FF9C005EA40C /* PETextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED621E241DD2FF9C005EA40C /* PETextFieldTableViewCell.m */; };
+		ED621E271DD2FF9C005EA40C /* PETextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED621E251DD2FF9C005EA40C /* PETextFieldTableViewCell.xib */; };
+		ED621E2C1DD31FBC005EA40C /* PETextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED621E2A1DD31FBC005EA40C /* PETextViewTableViewCell.m */; };
+		ED621E2D1DD31FBC005EA40C /* PETextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED621E2B1DD31FBC005EA40C /* PETextViewTableViewCell.xib */; };
+		ED621E311DD336A2005EA40C /* PEAddTableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = ED621E301DD336A2005EA40C /* PEAddTableViewControllerTwo.m */; };
 		ED7CD1461DCF0700004AE368 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7CD1451DCF0700004AE368 /* CloudKit.framework */; };
 		ED7CD1491DCF08A8004AE368 /* PEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD1481DCF08A8004AE368 /* PEManager.m */; };
 		ED7CD14C1DCF095F004AE368 /* PEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7CD14B1DCF095F004AE368 /* PEConstants.m */; };
@@ -59,8 +64,6 @@
 		BFEED8A23EC224BC7C089FFA /* Pods-ProjectEaten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectEaten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectEaten/Pods-ProjectEaten.debug.xcconfig"; sourceTree = "<group>"; };
 		ED3D56621DD1C5F300D27118 /* PEAccountSetUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEAccountSetUpViewController.h; sourceTree = "<group>"; };
 		ED3D56631DD1C5F300D27118 /* PEAccountSetUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEAccountSetUpViewController.m; sourceTree = "<group>"; };
-		ED46D5621DD216B20030CC26 /* PEAddViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEAddViewControllerOne.h; sourceTree = "<group>"; };
-		ED46D5631DD216B20030CC26 /* PEAddViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEAddViewControllerOne.m; sourceTree = "<group>"; };
 		ED4773F41DCDC0100098263E /* ProjectEaten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectEaten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4773F81DCDC0100098263E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED4773FA1DCDC0100098263E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,6 +82,16 @@
 		ED47741B1DCDC0100098263E /* ProjectEatenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectEatenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED47741F1DCDC0100098263E /* ProjectEatenUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectEatenUITests.m; sourceTree = "<group>"; };
 		ED4774211DCDC0100098263E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED621E1B1DD2FB37005EA40C /* PEAddTableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEAddTableViewControllerOne.h; sourceTree = "<group>"; };
+		ED621E1C1DD2FB37005EA40C /* PEAddTableViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEAddTableViewControllerOne.m; sourceTree = "<group>"; };
+		ED621E231DD2FF9C005EA40C /* PETextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PETextFieldTableViewCell.h; sourceTree = "<group>"; };
+		ED621E241DD2FF9C005EA40C /* PETextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PETextFieldTableViewCell.m; sourceTree = "<group>"; };
+		ED621E251DD2FF9C005EA40C /* PETextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PETextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		ED621E291DD31FBC005EA40C /* PETextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PETextViewTableViewCell.h; sourceTree = "<group>"; };
+		ED621E2A1DD31FBC005EA40C /* PETextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PETextViewTableViewCell.m; sourceTree = "<group>"; };
+		ED621E2B1DD31FBC005EA40C /* PETextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PETextViewTableViewCell.xib; sourceTree = "<group>"; };
+		ED621E2F1DD336A2005EA40C /* PEAddTableViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEAddTableViewControllerTwo.h; sourceTree = "<group>"; };
+		ED621E301DD336A2005EA40C /* PEAddTableViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEAddTableViewControllerTwo.m; sourceTree = "<group>"; };
 		ED7CD1431DCF06F2004AE368 /* ProjectEaten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectEaten.entitlements; sourceTree = "<group>"; };
 		ED7CD1451DCF0700004AE368 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		ED7CD1471DCF08A8004AE368 /* PEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEManager.h; sourceTree = "<group>"; };
@@ -168,20 +181,8 @@
 				ED7CD14B1DCF095F004AE368 /* PEConstants.m */,
 				ED7CD1471DCF08A8004AE368 /* PEManager.h */,
 				ED7CD1481DCF08A8004AE368 /* PEManager.m */,
-				ED7CD14D1DCF0C05004AE368 /* PEFirstLaunchViewController.h */,
-				ED7CD14E1DCF0C05004AE368 /* PEFirstLaunchViewController.m */,
-				ED7CD1541DCF3177004AE368 /* PEUserNameViewController.h */,
-				ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */,
-				ED7CD1571DCF547C004AE368 /* PEUserLocationViewController.h */,
-				ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */,
-				ED3D56621DD1C5F300D27118 /* PEAccountSetUpViewController.h */,
-				ED3D56631DD1C5F300D27118 /* PEAccountSetUpViewController.m */,
-				ED46D5621DD216B20030CC26 /* PEAddViewControllerOne.h */,
-				ED46D5631DD216B20030CC26 /* PEAddViewControllerOne.m */,
-				ED4773FD1DCDC0100098263E /* FirstViewController.h */,
-				ED4773FE1DCDC0100098263E /* FirstViewController.m */,
-				ED4774001DCDC0100098263E /* SecondViewController.h */,
-				ED4774011DCDC0100098263E /* SecondViewController.m */,
+				ED621E221DD2FF80005EA40C /* UI Elements */,
+				ED621E1E1DD2FF44005EA40C /* ViewControllers */,
 				ED4774031DCDC0100098263E /* Main.storyboard */,
 				ED4774061DCDC0100098263E /* Assets.xcassets */,
 				ED4774081DCDC0100098263E /* LaunchScreen.storyboard */,
@@ -216,6 +217,82 @@
 				ED4774211DCDC0100098263E /* Info.plist */,
 			);
 			path = ProjectEatenUITests;
+			sourceTree = "<group>";
+		};
+		ED621E1E1DD2FF44005EA40C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED621E1F1DD2FF57005EA40C /* First Launch */,
+				ED621E211DD2FF71005EA40C /* Add Item */,
+				ED621E201DD2FF67005EA40C /* Tab Bar */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ED621E1F1DD2FF57005EA40C /* First Launch */ = {
+			isa = PBXGroup;
+			children = (
+				ED7CD14D1DCF0C05004AE368 /* PEFirstLaunchViewController.h */,
+				ED7CD14E1DCF0C05004AE368 /* PEFirstLaunchViewController.m */,
+				ED7CD1541DCF3177004AE368 /* PEUserNameViewController.h */,
+				ED7CD1551DCF3177004AE368 /* PEUserNameViewController.m */,
+				ED7CD1571DCF547C004AE368 /* PEUserLocationViewController.h */,
+				ED7CD1581DCF547C004AE368 /* PEUserLocationViewController.m */,
+				ED3D56621DD1C5F300D27118 /* PEAccountSetUpViewController.h */,
+				ED3D56631DD1C5F300D27118 /* PEAccountSetUpViewController.m */,
+			);
+			name = "First Launch";
+			sourceTree = "<group>";
+		};
+		ED621E201DD2FF67005EA40C /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				ED4773FD1DCDC0100098263E /* FirstViewController.h */,
+				ED4773FE1DCDC0100098263E /* FirstViewController.m */,
+				ED4774001DCDC0100098263E /* SecondViewController.h */,
+				ED4774011DCDC0100098263E /* SecondViewController.m */,
+			);
+			name = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		ED621E211DD2FF71005EA40C /* Add Item */ = {
+			isa = PBXGroup;
+			children = (
+				ED621E1B1DD2FB37005EA40C /* PEAddTableViewControllerOne.h */,
+				ED621E1C1DD2FB37005EA40C /* PEAddTableViewControllerOne.m */,
+				ED621E2F1DD336A2005EA40C /* PEAddTableViewControllerTwo.h */,
+				ED621E301DD336A2005EA40C /* PEAddTableViewControllerTwo.m */,
+			);
+			name = "Add Item";
+			sourceTree = "<group>";
+		};
+		ED621E221DD2FF80005EA40C /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				ED621E281DD2FFA5005EA40C /* TextFieldCell */,
+				ED621E2E1DD320B4005EA40C /* TextViewCell */,
+			);
+			name = "UI Elements";
+			sourceTree = "<group>";
+		};
+		ED621E281DD2FFA5005EA40C /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED621E231DD2FF9C005EA40C /* PETextFieldTableViewCell.h */,
+				ED621E241DD2FF9C005EA40C /* PETextFieldTableViewCell.m */,
+				ED621E251DD2FF9C005EA40C /* PETextFieldTableViewCell.xib */,
+			);
+			name = TextFieldCell;
+			sourceTree = "<group>";
+		};
+		ED621E2E1DD320B4005EA40C /* TextViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED621E291DD31FBC005EA40C /* PETextViewTableViewCell.h */,
+				ED621E2A1DD31FBC005EA40C /* PETextViewTableViewCell.m */,
+				ED621E2B1DD31FBC005EA40C /* PETextViewTableViewCell.xib */,
+			);
+			name = TextViewCell;
 			sourceTree = "<group>";
 		};
 		ED7CD1441DCF0700004AE368 /* Frameworks */ = {
@@ -357,9 +434,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED621E271DD2FF9C005EA40C /* PETextFieldTableViewCell.xib in Resources */,
 				ED47740A1DCDC0100098263E /* LaunchScreen.storyboard in Resources */,
 				ED4774071DCDC0100098263E /* Assets.xcassets in Resources */,
 				ED7CD1531DCF2753004AE368 /* IMG_0102.mp4 in Resources */,
+				ED621E2D1DD31FBC005EA40C /* PETextViewTableViewCell.xib in Resources */,
 				ED4774051DCDC0100098263E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,14 +616,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED7CD14C1DCF095F004AE368 /* PEConstants.m in Sources */,
-				ED46D5641DD216B20030CC26 /* PEAddViewControllerOne.m in Sources */,
 				ED7CD1591DCF547C004AE368 /* PEUserLocationViewController.m in Sources */,
+				ED621E261DD2FF9C005EA40C /* PETextFieldTableViewCell.m in Sources */,
+				ED621E1D1DD2FB37005EA40C /* PEAddTableViewControllerOne.m in Sources */,
 				ED7CD1561DCF3177004AE368 /* PEUserNameViewController.m in Sources */,
 				ED7CD1491DCF08A8004AE368 /* PEManager.m in Sources */,
 				ED4774021DCDC0100098263E /* SecondViewController.m in Sources */,
+				ED621E2C1DD31FBC005EA40C /* PETextViewTableViewCell.m in Sources */,
 				ED4773FC1DCDC0100098263E /* AppDelegate.m in Sources */,
 				ED4773FF1DCDC0100098263E /* FirstViewController.m in Sources */,
 				ED7CD14F1DCF0C05004AE368 /* PEFirstLaunchViewController.m in Sources */,
+				ED621E311DD336A2005EA40C /* PEAddTableViewControllerTwo.m in Sources */,
 				ED4773F91DCDC0100098263E /* main.m in Sources */,
 				ED3D56641DD1C5F300D27118 /* PEAccountSetUpViewController.m in Sources */,
 			);
@@ -626,7 +708,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_ACTIVITY_MODE = "";
-				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;

@@ -15,8 +15,9 @@
 
 @interface PEAccountSetUpViewController ()
 
-@property (strong, nonatomic) GMSPlacesClient *placesClient;
 @property (weak, nonatomic) IBOutlet UILabel *logLabel;
+
+@property (strong, nonatomic) GMSPlacesClient *placesClient;
 @property (assign, nonatomic) BOOL shouldLog;
 
 @end
@@ -27,11 +28,6 @@
     [super viewDidLoad];
     self.placesClient = [GMSPlacesClient sharedClient];
     self.shouldLog = YES;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -62,6 +58,52 @@
         [self updateUser];
     }
 }
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - UIAlert -
+
+-(void)alertWithError:(NSError*)error{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Somthing went wrong" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - UILogs -
+
+-(void)doFinishingUp{
+    if (self.shouldLog) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.logLabel.alpha = 0;
+        } completion:^(BOOL finished) {
+            self.logLabel.text = @"Finishing up...";
+            [UIView animateWithDuration:0.3 animations:^{
+                self.logLabel.alpha = 1;
+            } completion:nil];
+        }];
+    }
+}
+
+-(void)doSciencyStuff{
+    if (self.shouldLog) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.logLabel.alpha = 0;
+        } completion:^(BOOL finished) {
+            self.logLabel.text = @"Doing more stuff...";
+            [UIView animateWithDuration:0.3 animations:^{
+                self.logLabel.alpha = 1;
+            } completion:nil];
+        }];
+    }
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Other -
@@ -132,50 +174,5 @@
     [defaults setObject:userDictionary forKey:kPECurrentUserKey];
     [defaults synchronize];
 }
-
--(void)alertWithError:(NSError*)error{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Somthing went wrong" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
-    [alert addAction:ok];
-    [self presentViewController:alert animated:YES completion:nil];
-}
-
--(void)doFinishingUp{
-    if (self.shouldLog) {
-        [UIView animateWithDuration:0.3 animations:^{
-            self.logLabel.alpha = 0;
-        } completion:^(BOOL finished) {
-            self.logLabel.text = @"Finishing up...";
-            [UIView animateWithDuration:0.3 animations:^{
-                self.logLabel.alpha = 1;
-            } completion:nil];
-        }];
-    }
-}
-
--(void)doSciencyStuff{
-    if (self.shouldLog) {
-        [UIView animateWithDuration:0.3 animations:^{
-            self.logLabel.alpha = 0;
-        } completion:^(BOOL finished) {
-            self.logLabel.text = @"Doing more stuff...";
-            [UIView animateWithDuration:0.3 animations:^{
-                self.logLabel.alpha = 1;
-            } completion:nil];
-        }];
-    }
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

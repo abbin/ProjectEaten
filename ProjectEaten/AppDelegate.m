@@ -24,7 +24,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [GMSPlacesClient provideAPIKey:@"AIzaSyDCXB1ZqQdo0mCq4bhgx6rpuL0NYs5qvZM"];
+    
+#ifdef DEBUG
+    NSLog(@"DEBUG");
+#else
     [Fabric with:@[[Crashlytics class]]];
+#endif
     
     [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];

@@ -28,7 +28,6 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:&sessionError];
     [[AVAudioSession sharedInstance] setActive:YES error:&sessionError];
     
-    //Set up player
     NSURL *movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"IMG_0102" ofType:@"mp4"]];
     AVAsset *avAsset = [AVAsset assetWithURL:movieURL];
     AVPlayerItem *avPlayerItem =[[AVPlayerItem alloc]initWithAsset:avAsset];
@@ -38,7 +37,6 @@
     [avPlayerLayer setFrame:CGRectMake(0, 0, ([UIScreen mainScreen].bounds.size.width-30), ([UIScreen mainScreen].bounds.size.width-30)*9/16)];
     [self.playerView.layer addSublayer:avPlayerLayer];
     
-    //Config player
     [self.avplayer seekToTime:kCMTimeZero];
     [self.avplayer setVolume:0.0f];
     [self.avplayer setActionAtItemEnd:AVPlayerActionAtItemEndNone];
@@ -74,10 +72,7 @@
     [self.avplayer play];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Actions -
@@ -86,15 +81,5 @@
     PEUserNameViewController *userNameVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PEUserNameViewController"];
     [self.navigationController pushViewController:userNameVC animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

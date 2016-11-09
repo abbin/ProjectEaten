@@ -15,6 +15,8 @@
 
 FOUNDATION_EXPORT NSInteger const kPERecordAlreadyExistsErrorCodeKey;
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - User -
 
@@ -24,6 +26,8 @@ FOUNDATION_EXPORT NSString *const kPECurrentUserLocationNameKey;
 FOUNDATION_EXPORT NSString *const kPECurrentUserLocationCoordinateKey;
 FOUNDATION_EXPORT NSString *const kPECurrentUserLocationLatitudeKey;
 FOUNDATION_EXPORT NSString *const kPECurrentUserLocationLongitudeKey;
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - RecordType -

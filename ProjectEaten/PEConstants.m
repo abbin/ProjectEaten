@@ -13,7 +13,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Error Code -
 
-NSInteger const kPERecordAlreadyExistsErrorCodeKey                           = 14;
+NSInteger const kPERecordAlreadyExistsErrorCodeKey          = 14;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - User -
@@ -28,6 +28,6 @@ NSString *const kPECurrentUserLocationLongitudeKey          = @"currentUserLocat
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - RecordType -
 
-NSString *const kPEUserRecordTypeKey    = @"UserProfile";
+NSString *const kPEUserRecordTypeKey                        = @"UserProfile";
 
 @end

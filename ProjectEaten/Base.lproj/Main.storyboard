@@ -370,23 +370,41 @@
             </objects>
             <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
         </scene>
-        <!--Add View Controller One-->
-        <scene sceneID="Yyt-eF-UeP">
+        <!--Add Table View Controller One-->
+        <scene sceneID="SCe-W3-5cT">
             <objects>
-                <viewController storyboardIdentifier="PEAddViewControllerOne" id="qTv-jL-Qts" customClass="PEAddViewControllerOne" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5el-b1-43v"/>
-                        <viewControllerLayoutGuide type="bottom" id="4zv-vT-y6L"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fPj-aw-MNM">
+                <tableViewController storyboardIdentifier="PEAddTableViewControllerOne" id="9cp-sJ-lh0" customClass="PEAddTableViewControllerOne" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="45" sectionHeaderHeight="18" sectionFooterHeight="18" id="fUB-mh-E5C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4pc-8k-QVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <connections>
+                            <outlet property="dataSource" destination="9cp-sJ-lh0" id="SIG-hb-hFc"/>
+                            <outlet property="delegate" destination="9cp-sJ-lh0" id="zWJ-BD-8SN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXv-y7-VMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="-321"/>
+            <point key="canvasLocation" x="2407" y="-321"/>
+        </scene>
+        <!--Add Table View Controller Two-->
+        <scene sceneID="MQf-Gv-erb">
+            <objects>
+                <tableViewController storyboardIdentifier="PEAddTableViewControllerTwo" id="uNl-RS-GWO" customClass="PEAddTableViewControllerTwo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1iz-sd-3qr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="uNl-RS-GWO" id="vSw-pq-XJv"/>
+                            <outlet property="delegate" destination="uNl-RS-GWO" id="ebN-s0-tuy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93w-3r-XhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3047" y="-322"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">

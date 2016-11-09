@@ -8,7 +8,7 @@
 
 #import "FirstViewController.h"
 #import "UIViewController+YMSPhotoHelper.h"
-#import "PEAddViewControllerOne.h"
+#import "PEAddTableViewControllerOne.h"
 
 @interface FirstViewController ()
 
@@ -28,8 +28,8 @@
 }
 
 - (IBAction)launchImagePicker:(id)sender {
-    PEAddViewControllerOne *addViewControllerOne = [self.storyboard instantiateViewControllerWithIdentifier:@"PEAddViewControllerOne"];
-    addViewControllerOne.view.backgroundColor = [UIColor clearColor];
+    PEAddTableViewControllerOne *addViewControllerOne = [self.storyboard instantiateViewControllerWithIdentifier:@"PEAddTableViewControllerOne"];
+    addViewControllerOne.tableView.alpha = 0;
     
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:addViewControllerOne];
     navigationController.modalPresentationStyle = UIModalPresentationOverFullScreen;
