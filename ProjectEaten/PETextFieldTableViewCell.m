@@ -80,13 +80,5 @@
         return YES;
     }
 }
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    if ([self.delegate respondsToSelector:@selector(textFieldCellShouldReturn:with:)]) {
-        return [self.delegate textFieldCellShouldReturn:textField with:self.cellIndexPath];
-    }
-    else{
-        return YES;
-    }
-}
 
 @end

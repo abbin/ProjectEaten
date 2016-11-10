@@ -406,6 +406,72 @@
             </objects>
             <point key="canvasLocation" x="3047" y="-322"/>
         </scene>
+        <!--Coordinates Picker Controller-->
+        <scene sceneID="kD6-Mf-5s4">
+            <objects>
+                <viewController storyboardIdentifier="PECoordinatesPickerController" id="QXk-kk-981" customClass="PECoordinatesPickerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KQG-RH-ncs"/>
+                        <viewControllerLayoutGuide type="bottom" id="WTa-0b-E7Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GjH-W0-8Eu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkc-Rx-kjH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Add location" id="s7N-TF-cJY">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jzk-CF-6gs">
+                                            <connections>
+                                                <action selector="cancelPicker:" destination="QXk-kk-981" id="YuB-mW-e3q"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PjC-jB-7ls">
+                                            <connections>
+                                                <action selector="donePickingLocation:" destination="QXk-kk-981" id="PRv-gh-bk7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diP-RR-CyH" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapsMarker" translatesAutoresizingMaskIntoConstraints="NO" id="jhK-c0-SPV">
+                                <rect key="frame" x="177" y="327.5" width="21" height="38"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWf-OX-lA8">
+                                <rect key="frame" x="325" y="617" width="30" height="30"/>
+                                <connections>
+                                    <action selector="goToCurrentLocation:" destination="QXk-kk-981" eventType="touchUpInside" id="Fwa-Wc-yVu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="diP-RR-CyH" firstAttribute="top" secondItem="Jkc-Rx-kjH" secondAttribute="bottom" id="1ww-0c-kew"/>
+                            <constraint firstAttribute="trailing" secondItem="diP-RR-CyH" secondAttribute="trailing" id="Df7-JP-CUi"/>
+                            <constraint firstItem="jhK-c0-SPV" firstAttribute="centerX" secondItem="diP-RR-CyH" secondAttribute="centerX" id="ER8-J1-mCr"/>
+                            <constraint firstItem="WTa-0b-E7Q" firstAttribute="top" secondItem="diP-RR-CyH" secondAttribute="bottom" id="J2V-O6-xco"/>
+                            <constraint firstAttribute="trailing" secondItem="BWf-OX-lA8" secondAttribute="trailing" constant="20" id="QtX-jo-KEa"/>
+                            <constraint firstAttribute="trailing" secondItem="Jkc-Rx-kjH" secondAttribute="trailing" id="TNv-4q-hb1"/>
+                            <constraint firstItem="diP-RR-CyH" firstAttribute="leading" secondItem="GjH-W0-8Eu" secondAttribute="leading" id="Vgi-w9-kTo"/>
+                            <constraint firstAttribute="bottom" secondItem="BWf-OX-lA8" secondAttribute="bottom" constant="20" id="Z3v-tM-1cc"/>
+                            <constraint firstItem="jhK-c0-SPV" firstAttribute="centerY" secondItem="diP-RR-CyH" secondAttribute="centerY" constant="-19" id="nO1-eA-CtE"/>
+                            <constraint firstItem="Jkc-Rx-kjH" firstAttribute="leading" secondItem="GjH-W0-8Eu" secondAttribute="leading" id="rYd-8e-ujh"/>
+                            <constraint firstItem="Jkc-Rx-kjH" firstAttribute="top" secondItem="KQG-RH-ncs" secondAttribute="bottom" id="uJ9-7w-dm9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapsView" destination="diP-RR-CyH" id="V10-HI-hhY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwp-Vh-Tou" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1291"/>
+        </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -506,6 +572,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="mapsMarker" width="21" height="38"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

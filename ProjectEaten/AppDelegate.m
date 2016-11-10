@@ -13,6 +13,7 @@
 #import <Crashlytics/Crashlytics.h>
 
 @import GooglePlaces;
+@import GoogleMaps;
 
 @interface AppDelegate ()
 
@@ -23,6 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [GMSServices provideAPIKey:@"AIzaSyCQYQ51xXYYURu9KSxwIfJ3H1mAzv_93Vc"];
     [GMSPlacesClient provideAPIKey:@"AIzaSyDCXB1ZqQdo0mCq4bhgx6rpuL0NYs5qvZM"];
     
 #ifdef DEBUG

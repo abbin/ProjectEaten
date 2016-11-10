@@ -11,6 +11,12 @@
 #import "PETextViewTableViewCell.h"
 #import "PEAddTableViewControllerTwo.h"
 
+typedef NS_ENUM(NSInteger, PEItemSection) {
+    PEItemSectionName,
+    PEItemSectionPrice,
+    PEItemSectionDescription
+};
+
 @interface PEAddTableViewControllerOne ()<PETextFieldTableViewCellDelegate>
 
 @property (strong, nonatomic) NSMutableArray *imagesArray;
@@ -32,6 +38,11 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"PETextViewTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PETextViewTableViewCell"];
     
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
 }
 
 
@@ -111,16 +122,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0){
+    if (indexPath.section == PEItemSectionName){
         PETextFieldTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PETextFieldTableViewCell" forIndexPath:indexPath];
+        cell.cellIndexPath = indexPath;
+        cell.delegate = self;
         cell.cellTextField.placeholder = @"type here";
         cell.cellTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
-        cell.cellTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-        cell.delegate = self;
         return cell;
     }
-    else if (indexPath.section == 1) {
+    else if (indexPath.section == PEItemSectionPrice) {
         PETextFieldTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PETextFieldTableViewCell" forIndexPath:indexPath];
+        cell.cellIndexPath = indexPath;
+        cell.delegate = self;
         cell.cellTextField.placeholder = @"type here";
         cell.cellTextField.keyboardType = UIKeyboardTypeDecimalPad;
         return cell;
@@ -137,7 +150,7 @@
 #pragma mark - UITableViewDelegate -
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0 || indexPath.section == 1) {
+    if (indexPath.section == PEItemSectionName || indexPath.section == PEItemSectionPrice) {
         return 50;
     }
     else{
@@ -146,26 +159,50 @@
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
+    if (section == PEItemSectionName) {
         return @"Name";
     }
-    else if (section == 1){
+    else if (section == PEItemSectionPrice){
         return @"Price";
     }
-    else if (section == 2){
-        return @"Description (Optional)";
-    }
     else{
-        return @"";
+        return @"Description (Optional)";
     }
 }
 
-- (BOOL)textFieldCellShouldReturn:(UITextField *)textField with:(NSIndexPath*)indexPath{
-    if (indexPath.section == 0) {
-        PETextFieldTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
-        [cell.cellTextField becomeFirstResponder];
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - PETextFieldTableViewCellDelegate -
+
+-(BOOL)textFieldCell:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string with:(NSIndexPath *)indexPath{
+    if (indexPath.section == PEItemSectionPrice) {
+        if ((range.location == 0 && range.length == 1) || (range.location > 6 && range.length == 0)) {
+            return NO;
+        }
+        else{
+            return YES;
+        }
     }
-    return YES;
+    else{
+        return YES;
+    }
+}
+
+-(void)textFieldCellDidBeginEditing:(UITextField *)textField with:(NSIndexPath *)indexPath{
+    if (indexPath.section == PEItemSectionPrice) {
+        if ([textField.text isEqualToString:@""]) {
+            textField.text = [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol];
+        }
+    }
+}
+
+-(void)textFieldCellDidEndEditing:(UITextField *)textField with:(NSIndexPath *)indexPath{
+    if (indexPath.section == PEItemSectionPrice) {
+        if ([textField.text isEqualToString:[[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol]]) {
+            textField.text = @"";
+        }
+    }
 }
 
 

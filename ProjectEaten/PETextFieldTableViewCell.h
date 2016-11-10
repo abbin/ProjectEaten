@@ -18,7 +18,6 @@
 - (void)textFieldCellDidEndEditing:(UITextField *)textField with:(NSIndexPath*)indexPath;
 - (BOOL)textFieldCell:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string with:(NSIndexPath*)indexPath;
 - (BOOL)textFieldCellShouldClear:(UITextField *)textField with:(NSIndexPath*)indexPath;
-- (BOOL)textFieldCellShouldReturn:(UITextField *)textField with:(NSIndexPath*)indexPath;
 
 @end
 
