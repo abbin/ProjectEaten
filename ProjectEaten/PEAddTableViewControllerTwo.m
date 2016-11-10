@@ -10,6 +10,7 @@
 #import "PETextFieldTableViewCell.h"
 #import "PEDualTextFieldTableViewCell.h"
 #import "PECoordinatesPickerController.h"
+#import "PETagTableViewCell.h"
 
 typedef NS_ENUM(NSInteger, PERestaurantSection) {
     PERestaurantSectionName,
@@ -35,6 +36,7 @@ typedef NS_ENUM(NSInteger, PERestaurantSection) {
     
     [self.tableView registerNib:[UINib nibWithNibName:@"PETextFieldTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PETextFieldTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"PEDualTextFieldTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PEDualTextFieldTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"PETagTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PETagTableViewCell"];
     
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
 }
@@ -63,6 +65,10 @@ typedef NS_ENUM(NSInteger, PERestaurantSection) {
         cell.cellTextFieldTwo.placeholder = @"tap here";
         return cell;
     }
+    else if (indexPath.section == PERestaurantSectionPhoneNumber){
+        PETagTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PETagTableViewCell" forIndexPath:indexPath];
+        return cell;
+    }
     else{
         PETextFieldTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PETextFieldTableViewCell" forIndexPath:indexPath];
         cell.delegate = self;
@@ -78,9 +84,6 @@ typedef NS_ENUM(NSInteger, PERestaurantSection) {
         }
         else if (indexPath.section == PERestaurantSectionCity){
             cell.cellTextField.placeholder = @"tap here";
-        }
-        else if (indexPath.section == PERestaurantSectionPhoneNumber){
-            cell.cellTextField.keyboardType = UIKeyboardTypePhonePad;
         }
         return cell;
     }
@@ -158,14 +161,32 @@ typedef NS_ENUM(NSInteger, PERestaurantSection) {
         case PERestaurantSectionPhoneNumber:
             return YES;
             break;
-        case PERestaurantSectionWorkingDays:
+        case PERestaurantSectionWorkingDays:{
+//            PEWorkingDaysPickerController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"PEWorkingDaysPickerController"];
+//            [self presentViewController:VC animated:YES completion:nil];
             return NO;
+        }
             break;
         default:
             return YES;
             break;
     }
 }
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - PEDualTextFieldTableViewCellDelegate -
+
+-(void)dualTextFieldOneDidChangeEditing:(NSString *)string{
+    
+}
+
+-(void)dualTextFieldTwoDidChangeEditing:(NSString *)string{
+    
+}
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Actions -

@@ -440,7 +440,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapsMarker" translatesAutoresizingMaskIntoConstraints="NO" id="jhK-c0-SPV">
-                                <rect key="frame" x="177" y="327.5" width="21" height="38"/>
+                                <rect key="frame" x="177" y="328" width="21" height="38"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWf-OX-lA8">
                                 <rect key="frame" x="325" y="617" width="30" height="30"/>

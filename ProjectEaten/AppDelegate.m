@@ -35,6 +35,7 @@
     
     [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UIToolbar appearance] setBarTintColor:[UIColor whiteColor]];
     
     if (![PEManager isUserSet]) {
         PEFirstLaunchViewController *firstLaunch = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PEFirstLaunchViewController"];

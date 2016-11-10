@@ -18,6 +18,8 @@
 - (void)dualTextFieldCellDidEndEditing:(UITextField *)textField with:(NSIndexPath*)indexPath;
 - (BOOL)dualTextFieldCell:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string with:(NSIndexPath*)indexPath;
 - (BOOL)dualTextFieldCellShouldClear:(UITextField *)textField with:(NSIndexPath*)indexPath;
+- (void)dualTextFieldOneDidChangeEditing:(NSString*)string;
+- (void)dualTextFieldTwoDidChangeEditing:(NSString*)string;
 
 @end
 

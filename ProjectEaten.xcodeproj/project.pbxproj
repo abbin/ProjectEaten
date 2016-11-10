@@ -36,6 +36,9 @@
 		ED98C3D81DD457BE00C41117 /* PEDualTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED98C3D61DD457BE00C41117 /* PEDualTextFieldTableViewCell.m */; };
 		ED98C3D91DD457BE00C41117 /* PEDualTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED98C3D71DD457BE00C41117 /* PEDualTextFieldTableViewCell.xib */; };
 		ED98C3DE1DD4687600C41117 /* PECoordinatesPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED98C3DD1DD4687600C41117 /* PECoordinatesPickerController.m */; };
+		ED98C3E31DD484C500C41117 /* TLTagsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ED98C3E21DD484C500C41117 /* TLTagsControl.m */; };
+		ED98C3E71DD4851200C41117 /* PETagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED98C3E51DD4851200C41117 /* PETagTableViewCell.m */; };
+		ED98C3E81DD4851200C41117 /* PETagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED98C3E61DD4851200C41117 /* PETagTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,11 @@
 		ED98C3D71DD457BE00C41117 /* PEDualTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEDualTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		ED98C3DC1DD4687600C41117 /* PECoordinatesPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PECoordinatesPickerController.h; sourceTree = "<group>"; };
 		ED98C3DD1DD4687600C41117 /* PECoordinatesPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PECoordinatesPickerController.m; sourceTree = "<group>"; };
+		ED98C3E11DD484C500C41117 /* TLTagsControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTagsControl.h; sourceTree = "<group>"; };
+		ED98C3E21DD484C500C41117 /* TLTagsControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTagsControl.m; sourceTree = "<group>"; };
+		ED98C3E41DD4851200C41117 /* PETagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PETagTableViewCell.h; sourceTree = "<group>"; };
+		ED98C3E51DD4851200C41117 /* PETagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PETagTableViewCell.m; sourceTree = "<group>"; };
+		ED98C3E61DD4851200C41117 /* PETagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PETagTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,9 +285,9 @@
 		ED621E221DD2FF80005EA40C /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				ED98C3EA1DD4AB4A00C41117 /* Working Days Picker */,
 				ED98C3DB1DD4683E00C41117 /* TableViewCells */,
-				ED98C3DC1DD4687600C41117 /* PECoordinatesPickerController.h */,
-				ED98C3DD1DD4687600C41117 /* PECoordinatesPickerController.m */,
+				ED98C3DF1DD4847900C41117 /* Coordinates Picker */,
 			);
 			name = "UI Elements";
 			sourceTree = "<group>";
@@ -328,11 +336,48 @@
 		ED98C3DB1DD4683E00C41117 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				ED98C3E01DD4848A00C41117 /* TagCell */,
 				ED621E281DD2FFA5005EA40C /* TextFieldCell */,
 				ED621E2E1DD320B4005EA40C /* TextViewCell */,
 				ED98C3DA1DD4584C00C41117 /* DualTextFieldCell */,
 			);
 			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		ED98C3DF1DD4847900C41117 /* Coordinates Picker */ = {
+			isa = PBXGroup;
+			children = (
+				ED98C3DC1DD4687600C41117 /* PECoordinatesPickerController.h */,
+				ED98C3DD1DD4687600C41117 /* PECoordinatesPickerController.m */,
+			);
+			name = "Coordinates Picker";
+			sourceTree = "<group>";
+		};
+		ED98C3E01DD4848A00C41117 /* TagCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED98C3E91DD4859C00C41117 /* TagsControl */,
+				ED98C3E41DD4851200C41117 /* PETagTableViewCell.h */,
+				ED98C3E51DD4851200C41117 /* PETagTableViewCell.m */,
+				ED98C3E61DD4851200C41117 /* PETagTableViewCell.xib */,
+			);
+			name = TagCell;
+			sourceTree = "<group>";
+		};
+		ED98C3E91DD4859C00C41117 /* TagsControl */ = {
+			isa = PBXGroup;
+			children = (
+				ED98C3E11DD484C500C41117 /* TLTagsControl.h */,
+				ED98C3E21DD484C500C41117 /* TLTagsControl.m */,
+			);
+			name = TagsControl;
+			sourceTree = "<group>";
+		};
+		ED98C3EA1DD4AB4A00C41117 /* Working Days Picker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Working Days Picker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +511,7 @@
 				ED621E271DD2FF9C005EA40C /* PETextFieldTableViewCell.xib in Resources */,
 				ED98C3D91DD457BE00C41117 /* PEDualTextFieldTableViewCell.xib in Resources */,
 				ED47740A1DCDC0100098263E /* LaunchScreen.storyboard in Resources */,
+				ED98C3E81DD4851200C41117 /* PETagTableViewCell.xib in Resources */,
 				ED4774071DCDC0100098263E /* Assets.xcassets in Resources */,
 				ED7CD1531DCF2753004AE368 /* IMG_0102.mp4 in Resources */,
 				ED621E2D1DD31FBC005EA40C /* PETextViewTableViewCell.xib in Resources */,
@@ -650,7 +696,9 @@
 				ED621E261DD2FF9C005EA40C /* PETextFieldTableViewCell.m in Sources */,
 				ED621E1D1DD2FB37005EA40C /* PEAddTableViewControllerOne.m in Sources */,
 				ED7CD1561DCF3177004AE368 /* PEUserNameViewController.m in Sources */,
+				ED98C3E71DD4851200C41117 /* PETagTableViewCell.m in Sources */,
 				ED7CD1491DCF08A8004AE368 /* PEManager.m in Sources */,
+				ED98C3E31DD484C500C41117 /* TLTagsControl.m in Sources */,
 				ED4774021DCDC0100098263E /* SecondViewController.m in Sources */,
 				ED621E2C1DD31FBC005EA40C /* PETextViewTableViewCell.m in Sources */,
 				ED4773FC1DCDC0100098263E /* AppDelegate.m in Sources */,
