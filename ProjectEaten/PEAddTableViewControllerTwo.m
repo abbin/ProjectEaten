@@ -11,6 +11,7 @@
 #import "PEDualTextFieldTableViewCell.h"
 #import "PECoordinatesPickerController.h"
 #import "PETagTableViewCell.h"
+#import "PEDayPickerController.h"
 
 typedef NS_ENUM(NSInteger, PERestaurantSection) {
     PERestaurantSectionName,
@@ -22,7 +23,7 @@ typedef NS_ENUM(NSInteger, PERestaurantSection) {
     PERestaurantSectionWorkingHours,
 };
 
-@interface PEAddTableViewControllerTwo ()<PETextFieldTableViewCellDelegate,PEDualTextFieldTableViewCellDelegate>
+@interface PEAddTableViewControllerTwo ()<PETextFieldTableViewCellDelegate,PEDualTextFieldTableViewCellDelegate,TLTagsControlDelegate>
 
 @end
 
@@ -67,6 +68,16 @@ typedef NS_ENUM(NSInteger, PERestaurantSection) {
     }
     else if (indexPath.section == PERestaurantSectionPhoneNumber){
         PETagTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PETagTableViewCell" forIndexPath:indexPath];
+        cell.cellTagControl.tapDelegate = self;
+        cell.cellTagControl.tagPlaceholder = @"type here";
+        cell.cellTagControl.cellIndexPath = indexPath;
+        return cell;
+    }
+    else if (indexPath.section == PERestaurantSectionWorkingDays){
+        PETagTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PETagTableViewCell" forIndexPath:indexPath];
+        cell.cellTagControl.tapDelegate = self;
+        cell.cellTagControl.tagPlaceholder = @"tap here";
+        cell.cellTagControl.cellIndexPath = indexPath;
         return cell;
     }
     else{
@@ -161,12 +172,6 @@ typedef NS_ENUM(NSInteger, PERestaurantSection) {
         case PERestaurantSectionPhoneNumber:
             return YES;
             break;
-        case PERestaurantSectionWorkingDays:{
-//            PEWorkingDaysPickerController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"PEWorkingDaysPickerController"];
-//            [self presentViewController:VC animated:YES completion:nil];
-            return NO;
-        }
-            break;
         default:
             return YES;
             break;
@@ -186,6 +191,23 @@ typedef NS_ENUM(NSInteger, PERestaurantSection) {
     
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - TLTagsControlDelegate -
+
+-(BOOL)tagsControlShouldBeginEditing:(TLTagsControl *)tagsControl withIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == PERestaurantSectionPhoneNumber) {
+        return YES;
+    }
+    else{
+        PEDayPickerController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"PEDayPickerController"];
+        [VC withCompletionHandler:^(NSMutableArray *days) {
+            
+        }];
+        [self presentViewController:VC animated:YES completion:nil];
+        return NO;
+    }
+}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////

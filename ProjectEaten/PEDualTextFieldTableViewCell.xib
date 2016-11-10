@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W50-KW-Buv">
-                        <rect key="frame" x="17" y="23" width="139" height="50"/>
+                        <rect key="frame" x="17" y="27" width="139" height="46"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -27,7 +27,7 @@
                         </connections>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QdU-Tu-H3M">
-                        <rect key="frame" x="164" y="23" width="139" height="50"/>
+                        <rect key="frame" x="164" y="27" width="139" height="46"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -36,14 +36,14 @@
                         </connections>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgo-Bi-rLV">
-                        <rect key="frame" x="17" y="8" width="139" height="15"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <rect key="frame" x="17" y="15" width="139" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.70293243838028174" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npw-zP-IL1">
-                        <rect key="frame" x="164" y="8" width="139" height="15"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <rect key="frame" x="164" y="15" width="139" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.70293243838028174" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -53,8 +53,8 @@
                     <constraint firstItem="QdU-Tu-H3M" firstAttribute="top" secondItem="Npw-zP-IL1" secondAttribute="bottom" id="8OT-D7-9i5"/>
                     <constraint firstItem="QdU-Tu-H3M" firstAttribute="width" secondItem="W50-KW-Buv" secondAttribute="width" id="A1M-RZ-8f9"/>
                     <constraint firstItem="W50-KW-Buv" firstAttribute="top" secondItem="Cgo-Bi-rLV" secondAttribute="bottom" id="Eb0-wb-GZB"/>
-                    <constraint firstItem="Npw-zP-IL1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="IZO-F8-dL0"/>
-                    <constraint firstItem="Cgo-Bi-rLV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Jbi-cH-OOH"/>
+                    <constraint firstItem="Npw-zP-IL1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="IZO-F8-dL0"/>
+                    <constraint firstItem="Cgo-Bi-rLV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Jbi-cH-OOH"/>
                     <constraint firstItem="W50-KW-Buv" firstAttribute="leading" secondItem="Cgo-Bi-rLV" secondAttribute="leading" id="N3a-v8-si2"/>
                     <constraint firstItem="W50-KW-Buv" firstAttribute="width" secondItem="Cgo-Bi-rLV" secondAttribute="width" id="OS5-5m-LW9"/>
                     <constraint firstAttribute="bottom" secondItem="QdU-Tu-H3M" secondAttribute="bottom" id="V8W-dt-fQp"/>

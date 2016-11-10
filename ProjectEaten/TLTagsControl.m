@@ -319,6 +319,15 @@
 
 #pragma mark - textfield stuff
 
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if ([self.tapDelegate respondsToSelector:@selector(tagsControlShouldBeginEditing:withIndexPath:)]) {
+        return [self.tapDelegate tagsControlShouldBeginEditing:self withIndexPath:self.cellIndexPath];
+    }
+    else{
+        return YES;
+    }
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField.text.length > 0) {
         NSString *tag = textField.text;

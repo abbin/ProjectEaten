@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TLTagsControl.h"
 
 @interface PETagTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet TLTagsControl *cellTagControl;
 
 @end

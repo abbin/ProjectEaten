@@ -43,6 +43,7 @@
         [nav setNavigationBarHidden:YES];
         self.window.rootViewController = nav;
     }
+    
     return YES;
 }
 

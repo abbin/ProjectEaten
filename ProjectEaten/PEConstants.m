@@ -18,7 +18,7 @@ NSInteger const kPERecordAlreadyExistsErrorCodeKey          = 14;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - User -
 
-NSString *const kPECurrentUserKey                           = @"currentUser";
+NSString *const kPECurrentUserKey                           = @"currentUserDictionary";
 NSString *const kPECurrentUserNameKey                       = @"currentUserName";
 NSString *const kPECurrentUserLocationNameKey               = @"currentUserLocationName";
 NSString *const kPECurrentUserLocationCoordinateKey         = @"currentUserLocationCoordinate";

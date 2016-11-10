@@ -28,6 +28,9 @@
                     <constraint firstAttribute="trailing" secondItem="WAP-mQ-BjW" secondAttribute="trailing" constant="17" id="ebo-3t-0hV"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="cellTagControl" destination="WAP-mQ-BjW" id="Egg-Yp-rcN"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

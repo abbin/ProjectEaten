@@ -12,7 +12,10 @@
 
 @protocol TLTagsControlDelegate <NSObject>
 
+@optional
+
 - (void)tagsControl:(TLTagsControl *)tagsControl tappedAtIndex:(NSInteger)index;
+- (BOOL)tagsControlShouldBeginEditing:(TLTagsControl *)tagsControl withIndexPath:(NSIndexPath*)indexPath;
 
 @end
 
@@ -29,6 +32,7 @@ typedef NS_ENUM(NSUInteger, TLTagsControlMode) {
 @property (nonatomic, strong) UIColor *tagsDeleteButtonColor;
 @property (nonatomic, strong) NSString *tagPlaceholder;
 @property (nonatomic) TLTagsControlMode mode;
+@property (nonatomic, strong) NSIndexPath *cellIndexPath;
 
 @property (assign, nonatomic) id<TLTagsControlDelegate> tapDelegate;
 
