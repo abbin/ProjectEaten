@@ -20,13 +20,13 @@
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MbG-Rl-P3V">
                         <rect key="frame" x="17" y="0.0" width="286" height="47"/>
                         <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="Y7f-H3-KgV"/>
                         </connections>
                     </textField>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pm1-dD-gjF">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pm1-dD-gjF">
                         <rect key="frame" x="17" y="47" width="303" height="0.0"/>
                         <color key="backgroundColor" white="0.0" alpha="0.19701804577464788" colorSpace="calibratedWhite"/>
                         <constraints>

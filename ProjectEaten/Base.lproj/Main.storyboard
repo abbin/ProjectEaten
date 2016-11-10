@@ -374,10 +374,10 @@
         <scene sceneID="SCe-W3-5cT">
             <objects>
                 <tableViewController storyboardIdentifier="PEAddTableViewControllerOne" id="9cp-sJ-lh0" customClass="PEAddTableViewControllerOne" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="45" sectionHeaderHeight="18" sectionFooterHeight="18" id="fUB-mh-E5C">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="45" sectionHeaderHeight="18" sectionFooterHeight="18" id="fUB-mh-E5C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="9cp-sJ-lh0" id="SIG-hb-hFc"/>
                             <outlet property="delegate" destination="9cp-sJ-lh0" id="zWJ-BD-8SN"/>
@@ -392,10 +392,10 @@
         <scene sceneID="MQf-Gv-erb">
             <objects>
                 <tableViewController storyboardIdentifier="PEAddTableViewControllerTwo" id="uNl-RS-GWO" customClass="PEAddTableViewControllerTwo" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1iz-sd-3qr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="1iz-sd-3qr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="uNl-RS-GWO" id="vSw-pq-XJv"/>
                             <outlet property="delegate" destination="uNl-RS-GWO" id="ebN-s0-tuy"/>

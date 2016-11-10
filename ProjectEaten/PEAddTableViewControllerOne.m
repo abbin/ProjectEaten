@@ -138,7 +138,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0 || indexPath.section == 1) {
-        return 45;
+        return 50;
     }
     else{
         return 100;
@@ -181,7 +181,7 @@
     }];
     [actionSheet addAction:yes];
     [actionSheet addAction:cancel];
-    [self presentViewController:actionSheet animated:yes completion:nil];
+    [self presentViewController:actionSheet animated:YES completion:nil];
 }
 
 -(void)nextScreen{

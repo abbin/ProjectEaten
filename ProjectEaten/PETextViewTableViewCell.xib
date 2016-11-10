@@ -20,10 +20,10 @@
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-cq-x95">
                         <rect key="frame" x="12" y="0.0" width="296" height="99"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4h-AS-S3e">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4h-AS-S3e">
                         <rect key="frame" x="17" y="99" width="303" height="1"/>
                         <color key="backgroundColor" white="0.0" alpha="0.19886113556338028" colorSpace="calibratedWhite"/>
                         <constraints>
