@@ -285,7 +285,6 @@
 		ED621E221DD2FF80005EA40C /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
-				ED98C3EA1DD4AB4A00C41117 /* Working Days Picker */,
 				ED98C3DB1DD4683E00C41117 /* TableViewCells */,
 				ED98C3DF1DD4847900C41117 /* Coordinates Picker */,
 			);
@@ -371,13 +370,6 @@
 				ED98C3E21DD484C500C41117 /* TLTagsControl.m */,
 			);
 			name = TagsControl;
-			sourceTree = "<group>";
-		};
-		ED98C3EA1DD4AB4A00C41117 /* Working Days Picker */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Working Days Picker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
